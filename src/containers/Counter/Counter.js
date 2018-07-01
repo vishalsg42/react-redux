@@ -8,7 +8,10 @@ class Counter extends Component {
         counter: 0
     }
 
-    counterChangedHandler = ( action, value ) => {
+    counterChangedHandler = ( action, value = 1   ) => {
+        console.log('action',action);
+        console.log('value',value);
+        
         switch ( action ) {
             case 'inc':
                 this.setState( ( prevState ) => { return { counter: prevState.counter + 1 } } )
@@ -22,6 +25,9 @@ class Counter extends Component {
             case 'sub':
                 this.setState( ( prevState ) => { return { counter: prevState.counter - value } } )
                 break;
+            default:
+                console.log('hello');
+            
         }
     }
 
