@@ -5,13 +5,13 @@ const initialState = {
     counter: 0
 }
 const rootReducer = (state = initialState ,actions) =>{
-    if(actions.type == 'INC_COUNTER') {
+    if(actions.type === 'INC_COUNTER') {
         return {
             ...state,
             counter: state.counter+ 1
         }
     }
-    if(actions.type == 'ADD_COUNTER') {
+    if(actions.type === 'ADD_COUNTER') {
         return {
             // ...state,
             counter: state.counter+ actions.value
